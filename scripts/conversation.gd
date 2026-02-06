@@ -26,6 +26,7 @@ func next_text():
 		conversation_panel.next_action()
 	else:
 		masked_fields[current_text].activate()
+		conversation_panel.restart_timer()
 
 func is_meca_text():
 	return masked_fields[current_text] is MecaEdit

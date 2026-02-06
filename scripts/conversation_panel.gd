@@ -46,6 +46,12 @@ func stop_timer():
 	timeout = false
 	$Label.visible = false
 
+func restart_timer():
+	$Timer.stop()
+	$Timer.start()
+	timeout = true
+	$Label.visible = true
+
 func get_time_left():
 	return time_left
 
