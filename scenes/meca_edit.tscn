@@ -1,0 +1,69 @@
+[gd_scene format=3 uid="uid://bvo7bd16vdg8r"]
+
+[ext_resource type="Theme" uid="uid://dd4mjbdjh70dg" path="res://themes/inputtext.tres" id="1_07kr6"]
+[ext_resource type="Script" uid="uid://571s3ktyw33k" path="res://scripts/meca_edit.gd" id="2_07kr6"]
+[ext_resource type="FontFile" uid="uid://cc6q3vdvv2kti" path="res://fonts/VT323-Regular.ttf" id="2_qchl5"]
+
+[sub_resource type="FontVariation" id="FontVariation_7eqac"]
+base_font = ExtResource("2_qchl5")
+variation_embolden = 0.2
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_uwrxv"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yqjtg"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_lnu2h"]
+
+[sub_resource type="FontVariation" id="FontVariation_ylqc8"]
+base_font = ExtResource("2_qchl5")
+variation_embolden = 0.2
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qchl5"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7eqac"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ylqc8"]
+
+[node name="LineEdit" type="LineEdit" unique_id=1219361879]
+offset_right = 40.0
+offset_bottom = 25.0
+theme = ExtResource("1_07kr6")
+theme_override_colors/font_uneditable_color = Color(0.45646393, 0.456464, 0.456464, 1)
+theme_override_fonts/font = SubResource("FontVariation_7eqac")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_uwrxv")
+theme_override_styles/read_only = SubResource("StyleBoxEmpty_yqjtg")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_lnu2h")
+editable = false
+expand_to_text_length = true
+context_menu_enabled = false
+emoji_menu_enabled = false
+shortcut_keys_enabled = false
+middle_mouse_paste_enabled = false
+selecting_enabled = false
+deselect_on_focus_loss_enabled = false
+drag_and_drop_selection_enabled = false
+flat = true
+script = ExtResource("2_07kr6")
+
+[node name="LineEdit" type="LineEdit" parent="." unique_id=1182377698]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 25.0
+theme = ExtResource("1_07kr6")
+theme_override_fonts/font = SubResource("FontVariation_ylqc8")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_qchl5")
+theme_override_styles/read_only = SubResource("StyleBoxEmpty_7eqac")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ylqc8")
+editable = false
+expand_to_text_length = true
+context_menu_enabled = false
+emoji_menu_enabled = false
+shortcut_keys_enabled = false
+middle_mouse_paste_enabled = false
+selecting_enabled = false
+deselect_on_focus_loss_enabled = false
+drag_and_drop_selection_enabled = false
+flat = true
+
+[connection signal="editing_toggled" from="LineEdit" to="." method="_on_editing_toggled"]
+[connection signal="text_changed" from="LineEdit" to="." method="_on_text_changed"]

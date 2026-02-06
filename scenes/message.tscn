@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://c7e4wqewyqgwa"]
+
+[ext_resource type="Theme" uid="uid://dd4mjbdjh70dg" path="res://themes/inputtext.tres" id="1_11qlq"]
+
+[node name="Panel" type="Panel" unique_id=190659816]
+offset_right = 329.0
+offset_bottom = 81.0
+
+[node name="TextContainer" type="HFlowContainer" parent="." unique_id=1998440247]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_11qlq")

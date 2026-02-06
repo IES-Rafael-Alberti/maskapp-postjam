@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://dh3l1lj5ktbgy"]
+
+[ext_resource type="Theme" uid="uid://dd4mjbdjh70dg" path="res://themes/inputtext.tres" id="1_0kys3"]
+
+[node name="Label" type="Label" unique_id=1587835955]
+offset_right = 116.0
+offset_bottom = 17.0
+theme = ExtResource("1_0kys3")
+text = "Lorem ipsum donor "

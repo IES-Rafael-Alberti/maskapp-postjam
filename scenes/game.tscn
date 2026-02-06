@@ -1,0 +1,147 @@
+[gd_scene format=3 uid="uid://d4epp6du8k0ee"]
+
+[ext_resource type="Script" uid="uid://dmmxio8jcxt3l" path="res://scripts/game.gd" id="1_yqjtg"]
+[ext_resource type="PackedScene" uid="uid://dh3l1lj5ktbgy" path="res://scenes/line_text.tscn" id="2_lbhrr"]
+[ext_resource type="PackedScene" uid="uid://cxqe5xvetca7k" path="res://scenes/line_edit.tscn" id="3_lnu2h"]
+[ext_resource type="PackedScene" uid="uid://cl3jlghbk3fir" path="res://scenes/conversation_p1.tscn" id="4_p57ef"]
+[ext_resource type="PackedScene" uid="uid://d1ed7v2jfqboh" path="res://scenes/conversation_p2.tscn" id="5_u5sy4"]
+[ext_resource type="Texture2D" uid="uid://1atg8wcju06l" path="res://art/assets/prototipo.png" id="6_p57ef"]
+[ext_resource type="Theme" uid="uid://dd4mjbdjh70dg" path="res://themes/inputtext.tres" id="7_u5sy4"]
+
+[node name="Game" type="Node2D" unique_id=1547055071]
+script = ExtResource("1_yqjtg")
+text_files = Array[String](["res://text/try-my-game.txt", "res://text/urgency.txt", "res://text/visitor.txt"])
+normal_text_scene = ExtResource("2_lbhrr")
+masked_text_scene = ExtResource("3_lnu2h")
+text_container_p1 = ExtResource("4_p57ef")
+text_container_p2 = ExtResource("5_u5sy4")
+metadata/_edit_vertical_guides_ = [246.0]
+
+[node name="Background" type="TextureRect" parent="." unique_id=1401381384]
+offset_top = 58.0
+offset_right = 1920.0
+offset_bottom = 1018.0
+texture = ExtResource("6_p57ef")
+
+[node name="Malaga Jam" type="Label" parent="Background" unique_id=2020000540]
+layout_mode = 0
+offset_left = 645.0
+offset_top = 18.0
+offset_right = 901.0
+offset_bottom = 83.0
+theme = ExtResource("7_u5sy4")
+theme_override_colors/font_color = Color(0.30323294, 0.30323276, 0.30323288, 1)
+theme_override_font_sizes/font_size = 64
+text = "Malaga Jam"
+
+[node name="Label" type="Label" parent="Background" unique_id=346802660]
+layout_mode = 0
+offset_left = 245.0
+offset_top = 125.0
+offset_right = 309.0
+offset_bottom = 158.0
+theme = ExtResource("7_u5sy4")
+theme_override_colors/font_color = Color(0.37225115, 0.37225133, 0.37225124, 1)
+theme_override_font_sizes/font_size = 32
+text = "GODOT"
+
+[node name="Label2" type="Label" parent="Background" unique_id=457659622]
+layout_mode = 0
+offset_left = 246.0
+offset_top = 223.0
+offset_right = 429.0
+offset_bottom = 254.0
+theme = ExtResource("7_u5sy4")
+theme_override_colors/font_color = Color(0.37225115, 0.37225133, 0.37225124, 1)
+theme_override_font_sizes/font_size = 32
+text = "Rafael Alberti"
+
+[node name="Label3" type="Label" parent="Background" unique_id=484603535]
+layout_mode = 0
+offset_left = 245.0
+offset_top = 317.0
+offset_right = 385.0
+offset_bottom = 350.0
+theme = ExtResource("7_u5sy4")
+theme_override_colors/font_color = Color(0.37225115, 0.37225133, 0.37225124, 1)
+theme_override_font_sizes/font_size = 32
+text = "Yes We Tech"
+
+[node name="Label4" type="Label" parent="Background" unique_id=1627200585]
+layout_mode = 0
+offset_left = 245.0
+offset_top = 415.0
+offset_right = 385.0
+offset_bottom = 448.0
+theme = ExtResource("7_u5sy4")
+theme_override_colors/font_color = Color(0.37225115, 0.37225133, 0.37225124, 1)
+theme_override_font_sizes/font_size = 32
+text = "FemDevs"
+
+[node name="Label5" type="Label" parent="Background" unique_id=2055887516]
+layout_mode = 0
+offset_left = 247.0
+offset_top = 510.0
+offset_right = 387.0
+offset_bottom = 543.0
+theme = ExtResource("7_u5sy4")
+theme_override_colors/font_color = Color(0.37225115, 0.37225133, 0.37225124, 1)
+theme_override_font_sizes/font_size = 32
+text = "Malaga Jam"
+
+[node name="Label6" type="Label" parent="Background" unique_id=1069117933]
+layout_mode = 0
+offset_left = 247.0
+offset_top = 601.0
+offset_right = 387.0
+offset_bottom = 634.0
+theme = ExtResource("7_u5sy4")
+theme_override_colors/font_color = Color(0.37225115, 0.37225133, 0.37225124, 1)
+theme_override_font_sizes/font_size = 32
+text = "La Madriguera"
+
+[node name="Label7" type="Label" parent="Background" unique_id=1940093379]
+layout_mode = 0
+offset_left = 246.0
+offset_top = 696.0
+offset_right = 386.0
+offset_bottom = 729.0
+theme = ExtResource("7_u5sy4")
+theme_override_colors/font_color = Color(0.37225115, 0.37225133, 0.37225124, 1)
+theme_override_font_sizes/font_size = 32
+text = "Envasador"
+
+[node name="Label8" type="Label" parent="Background" unique_id=124717483]
+layout_mode = 0
+offset_left = 246.0
+offset_top = 799.0
+offset_right = 386.0
+offset_bottom = 832.0
+theme = ExtResource("7_u5sy4")
+theme_override_colors/font_color = Color(0.37225115, 0.37225133, 0.37225124, 1)
+theme_override_font_sizes/font_size = 32
+text = "meta11co"
+
+[node name="Label9" type="Label" parent="Background" unique_id=915892882]
+layout_mode = 0
+offset_left = 245.0
+offset_top = 891.0
+offset_right = 385.0
+offset_bottom = 924.0
+theme = ExtResource("7_u5sy4")
+theme_override_colors/font_color = Color(0.37225115, 0.37225133, 0.37225124, 1)
+theme_override_font_sizes/font_size = 32
+text = "Reachy LMS"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="." unique_id=546000667]
+offset_left = 489.0
+offset_top = 154.0
+offset_right = 1916.0
+offset_bottom = 921.0
+
+[node name="Conversations" type="VBoxContainer" parent="ScrollContainer" unique_id=1025901083]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="HTTPRequest" type="HTTPRequest" parent="." unique_id=382812682]
