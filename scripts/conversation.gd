@@ -64,6 +64,16 @@ func load_file(dialog: String, text_container):
 					current_state = states.MECA
 					add_masked_text(temporal_text, text_container)
 					temporal_text = ""
+			" ": 
+				if current_state == states.NORMAL:
+					add_normal_text(temporal_text, text_container)
+					temporal_text = character
+				elif current_state == states.MASKED:
+					current_state = states.NORMAL
+					add_masked_text(temporal_text, text_container)
+					temporal_text = character
+				else:
+					temporal_text += character
 			_:
 				if current_state == states.MASKED:
 					current_state = states.NORMAL
