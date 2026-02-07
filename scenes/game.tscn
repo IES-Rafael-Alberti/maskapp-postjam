@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://cxqe5xvetca7k" path="res://scenes/line_edit.tscn" id="3_lnu2h"]
 [ext_resource type="PackedScene" uid="uid://cl3jlghbk3fir" path="res://scenes/conversation_p1.tscn" id="4_p57ef"]
 [ext_resource type="PackedScene" uid="uid://d1ed7v2jfqboh" path="res://scenes/conversation_p2.tscn" id="5_u5sy4"]
-[ext_resource type="Texture2D" uid="uid://1atg8wcju06l" path="res://art/assets/prototipo.png" id="6_p57ef"]
+[ext_resource type="Texture2D" uid="uid://e27upvutyxa3" path="res://art/assets/prototipo.png" id="6_p57ef"]
 [ext_resource type="Theme" uid="uid://dd4mjbdjh70dg" path="res://themes/inputtext.tres" id="7_u5sy4"]
 
 [node name="Game" type="Node2D" unique_id=1547055071]
@@ -33,6 +33,28 @@ theme = ExtResource("7_u5sy4")
 theme_override_colors/font_color = Color(0.30323294, 0.30323276, 0.30323288, 1)
 theme_override_font_sizes/font_size = 64
 text = "Malaga Jam"
+
+[node name="ScoreP1" type="Label" parent="Background" unique_id=1111111111]
+layout_mode = 0
+offset_left = 1146.0
+offset_top = 18.0
+offset_right = 1266.0
+offset_bottom = 83.0
+theme = ExtResource("7_u5sy4")
+theme_override_colors/font_color = Color(0.06666667, 0.4745098, 0.5137255, 1)
+theme_override_font_sizes/font_size = 48
+text = "P1: 0"
+
+[node name="ScoreP2" type="Label" parent="Background" unique_id=-2072745074]
+layout_mode = 0
+offset_left = 1682.0
+offset_top = 20.0
+offset_right = 1802.0
+offset_bottom = 85.0
+theme = ExtResource("7_u5sy4")
+theme_override_colors/font_color = Color(0.7137255, 0.18039216, 0.37254903, 1)
+theme_override_font_sizes/font_size = 48
+text = "P2: 0"
 
 [node name="Label" type="Label" parent="Background" unique_id=346802660]
 layout_mode = 0

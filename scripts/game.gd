@@ -11,8 +11,12 @@ extends Node2D
 
 @onready var conversations_panel = $ScrollContainer/Conversations
 @onready var scroll_container = $ScrollContainer
+@onready var score_p1_label = $Background/ScoreP1
+@onready var score_p2_label = $Background/ScoreP2
 
-var container_margin = 10.0 
+var container_margin = 10.0
+var displayed_scores: Array[int] = [0, 0]
+var score_tweens: Array[Tween] = [null, null] 
 var current_conversation: Conversation
 
 var players: Array[PackedScene]
@@ -59,6 +63,7 @@ func next_action():
 func next_player(first: bool = false):
 	if not first:
 		Global.scores[current_player] += current_conversation.score()
+		update_scores()
 		current_player += 1
 		current_player %= 2
 		current_dialog += 1
@@ -68,5 +73,33 @@ func next_player(first: bool = false):
 			return
 	Global.disconnect_next_text()
 	var conversation = players[current_player].instantiate()
-	conversations_panel.add_child(conversation)
 	current_conversation = Conversation.new(dialogs[current_dialog], conversation)
+	conversations_panel.add_child(conversation)
+
+
+func update_scores():
+	animate_score(0, score_p1_label, "P1")
+	animate_score(1, score_p2_label, "P2")
+
+func animate_score(player_idx: int, label: Label, prefix: String):
+	var target = Global.scores[player_idx]
+	var current = displayed_scores[player_idx]
+
+	if target == current:
+		return
+
+	if score_tweens[player_idx]:
+		score_tweens[player_idx].kill()
+
+	var diff = abs(target - current)
+	var duration = clamp(diff * 0.03, 0.2, 1.0)
+
+	score_tweens[player_idx] = create_tween()
+	score_tweens[player_idx].tween_method(
+		func(value: int):
+			displayed_scores[player_idx] = value
+			label.text = "%s: %d" % [prefix, value],
+		current,
+		target,
+		duration
+	).set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_QUAD)
