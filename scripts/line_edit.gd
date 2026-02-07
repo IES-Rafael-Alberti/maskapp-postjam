@@ -4,7 +4,8 @@ var container_margin = 10.0
 
 func activate():
 	editable = true
-	grab_focus()
+	if is_inside_tree():
+		grab_focus()
 
 func deactivate():
 	editable = false

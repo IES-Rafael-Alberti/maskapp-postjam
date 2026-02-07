@@ -29,4 +29,5 @@ func envia_reachy(_emoji: String):
 func _on_request_completed(_result, _response_code, _headers, _body):
 	pending_request = false
 	if _response_code >= 400:
+		reachy_present = false
 		print("can't reach reachy %d" % _response_code)

@@ -73,8 +73,9 @@ func next_player(first: bool = false):
 			return
 	Global.disconnect_next_text()
 	var conversation = players[current_player].instantiate()
-	conversations_panel.add_child(conversation)
 	current_conversation = Conversation.new(dialogs[current_dialog], conversation)
+	conversations_panel.add_child(conversation)
+
 
 func update_scores():
 	animate_score(0, score_p1_label, "P1")

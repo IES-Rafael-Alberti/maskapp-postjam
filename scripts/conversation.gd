@@ -16,7 +16,7 @@ func _init(dialog, _conversation_panel):
 	Global.next_text.connect(next_text)
 	conversation_panel = _conversation_panel
 	load_file(dialog, _conversation_panel.get_panel())
-	masked_fields[current_text].activate()
+	masked_fields[current_text].call_deferred("activate")
 
 func next_text():
 	if current_text < masked_fields.size():

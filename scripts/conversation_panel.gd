@@ -9,18 +9,20 @@ var time_left: float = 0
 var emoji_mult: float = 1.0
 var meca_score: int = 0
 var libre_score: float = 0.0
-var emoji_scores = {"yes1": 1.5,
-"loving1": 2.0,
-"cheerful1": 1.6,
-"laughing1": 2.0,
-"downcast1": -1.5,
-"enthusiastic1": 1.2,
-"helpful2": 1.0,
-"welcoming2": 1.0,
-"surprised2": 1.3,
-"laughing2": 0.9,
-"confused1": 2.1,
-"no1": -2.0}
+var emoji_scores = {
+			"yes1": 1.5,
+			"loving1": 2.0,
+			"cheerful1": 1.6,
+			"laughing1": 2.0,
+			"downcast1": -1.5,
+			"enthusiastic1": 1.2,
+			"helpful2": 1.0,
+			"welcoming2": 1.0,
+			"surprised2": 1.3,
+			"laughing2": 0.9,
+			"confused1": 2.1,
+			"no1": -2.0
+		}
 
 func _process(_delta: float) -> void:
 	if timeout and $Timer:
@@ -32,7 +34,16 @@ func _on_emoji_selected(_emoji):
 	emojis_selection = false
 	show_emojis(false)
 	$Emoji_selected.texture = _emoji.texture
-	$Emoji_selected.visible = true
+	$Emoji_selected.activate()
+	$ColorRect2.visible = true
+	get_tree().create_timer(1.5).timeout.connect(_on_highlight_end)
+	call_deferred("emojis_selected_emit")
+
+
+func _on_highlight_end():
+	$ColorRect2.visible = false
+
+func emojis_selected_emit():
 	emojis_selected.emit()
 
 func get_panel():
@@ -47,6 +58,7 @@ func stop_timer():
 	$Timer.stop()
 	timeout = false
 	$Label.visible = false
+	#$ColorRect.visible = false
 
 func restart_timer(is_meca: bool = false):
 	var remaining = $Timer.time_left
@@ -58,12 +70,15 @@ func restart_timer(is_meca: bool = false):
 	$Timer.start()
 	timeout = true
 	$Label.visible = true
+	#$ColorRect.visible = true
+
 
 func restart_timer_no_score():
 	$Timer.stop()
 	$Timer.start()
 	timeout = true
 	$Label.visible = true
+	#$ColorRect.visible = true
 
 func capture_last_field(is_meca: bool):
 	var remaining = $Timer.time_left
