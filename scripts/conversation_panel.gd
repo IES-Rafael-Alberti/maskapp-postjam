@@ -24,6 +24,12 @@ var emoji_scores = {
 			"no1": -2.0
 		}
 
+func _ready() -> void:
+	call_deferred("_update_scroll")
+
+func _update_scroll():
+	get_tree().current_scene.update_scroll()
+
 func _process(_delta: float) -> void:
 	if timeout and $Timer:
 		$Label.text = "%.2f" % $Timer.time_left
@@ -37,11 +43,12 @@ func _on_emoji_selected(_emoji):
 	$Emoji_selected.activate()
 	$ColorRect2.visible = true
 	get_tree().create_timer(1.5).timeout.connect(_on_highlight_end)
-	call_deferred("emojis_selected_emit")
+
 
 
 func _on_highlight_end():
 	$ColorRect2.visible = false
+	call_deferred("emojis_selected_emit")
 
 func emojis_selected_emit():
 	emojis_selected.emit()

@@ -1,10 +1,12 @@
 res://scenes/conversation_p2.tscn
 res://shaders/dashed_outline.gdshader
 res://shaders/glass.gdshader
-res://scripts/line_edit.gd
-res://scripts/conversation.gd
-res://scripts/conversation_panel.gd
-res://scripts/game.gd
 res://scenes/conversation_p1.tscn
-res://scripts/emoji.gd
+res://scenes/game.tscn
+res://scripts/game.gd
+res://scripts/conversation_panel.gd
 res://scripts/global.gd
+res://scenes/meca_edit.tscn
+res://scenes/line_edit.tscn
+res://scripts/line_edit.gd
+res://scripts/meca_edit.gd

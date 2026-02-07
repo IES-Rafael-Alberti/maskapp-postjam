@@ -1,24 +1,25 @@
 [gd_scene format=3 uid="uid://cl3jlghbk3fir"]
 
-[ext_resource type="Texture2D" uid="uid://dapwp444my1k" path="res://art/assets/mensaje-jugadore-azul.png" id="1_waefy"]
+[ext_resource type="Texture2D" uid="uid://vyf43o1ndn7n" path="res://art/assets/message_size.png" id="1_06qn3"]
+[ext_resource type="Texture2D" uid="uid://dtkhgs18wu24t" path="res://art/assets/mensaje-jugadore-azul.png" id="1_waefy"]
 [ext_resource type="PackedScene" uid="uid://c7e4wqewyqgwa" path="res://scenes/message.tscn" id="2_jr6y8"]
 [ext_resource type="Script" uid="uid://c3wffgetrvj2f" path="res://scripts/conversation_panel.gd" id="2_sk1ag"]
 [ext_resource type="Material" uid="uid://cgog7458khu6v" path="res://shaders/dashed_outline.tres" id="3_yyjqd"]
-[ext_resource type="Texture2D" uid="uid://c45ddu00g6w3c" path="res://art/assets/mensaje-emociones-light.png" id="4_sk1ag"]
+[ext_resource type="Texture2D" uid="uid://ce7v7yl6kn4eb" path="res://art/assets/mensaje-emociones-light.png" id="4_sk1ag"]
 [ext_resource type="Shader" uid="uid://bk4rkpv5augi" path="res://shaders/dashed_outline.gdshader" id="4_yyjqd"]
-[ext_resource type="Texture2D" uid="uid://d25iuqrp1abku" path="res://art/assets/emociones/yes1.png" id="5_fv2am"]
-[ext_resource type="Texture2D" uid="uid://gq31yy4u2dnx" path="res://art/assets/emociones/loving1.png" id="6_lub6j"]
+[ext_resource type="Texture2D" uid="uid://wuw0wywh1jww" path="res://art/assets/emociones/yes1.png" id="5_fv2am"]
+[ext_resource type="Texture2D" uid="uid://gkew4m5y3xvn" path="res://art/assets/emociones/loving1.png" id="6_lub6j"]
 [ext_resource type="Script" uid="uid://c7kmt5joy4ck" path="res://scripts/emoji.gd" id="6_tmmiu"]
-[ext_resource type="Texture2D" uid="uid://bhnq2sdmwvj61" path="res://art/assets/emociones/cheerful1.png" id="7_tmmiu"]
-[ext_resource type="Texture2D" uid="uid://b1l8lmcgk6g32" path="res://art/assets/emociones/laughing1.png" id="8_yyjqd"]
-[ext_resource type="Texture2D" uid="uid://pwj82ajnftdc" path="res://art/assets/emociones/downcast1.png" id="9_rl7n1"]
-[ext_resource type="Texture2D" uid="uid://bkowwa4j1n1xp" path="res://art/assets/emociones/enthusiastic1.png" id="10_cf5ty"]
-[ext_resource type="Texture2D" uid="uid://dd0pko06gqi5l" path="res://art/assets/emociones/helpful2.png" id="11_06qn3"]
-[ext_resource type="Texture2D" uid="uid://bg6pokw0u7obu" path="res://art/assets/emociones/welcoming2.png" id="12_jlknb"]
-[ext_resource type="Texture2D" uid="uid://hr3sekj534xm" path="res://art/assets/emociones/surprised2.png" id="13_76byg"]
-[ext_resource type="Texture2D" uid="uid://cr2dry2seduon" path="res://art/assets/emociones/laughing2.png" id="14_qxkno"]
-[ext_resource type="Texture2D" uid="uid://bxms2pr2jqot8" path="res://art/assets/emociones/confused1.png" id="15_0v711"]
-[ext_resource type="Texture2D" uid="uid://bwnsvpdaikn2c" path="res://art/assets/emociones/no1.png" id="16_rtqtf"]
+[ext_resource type="Texture2D" uid="uid://ctu7ieq186khs" path="res://art/assets/emociones/cheerful1.png" id="7_tmmiu"]
+[ext_resource type="Texture2D" uid="uid://bqs74lbulo5vc" path="res://art/assets/emociones/laughing1.png" id="8_yyjqd"]
+[ext_resource type="Texture2D" uid="uid://cqpslrc8n2q2f" path="res://art/assets/emociones/downcast1.png" id="9_rl7n1"]
+[ext_resource type="Texture2D" uid="uid://2hawtikrvyfn" path="res://art/assets/emociones/enthusiastic1.png" id="10_cf5ty"]
+[ext_resource type="Texture2D" uid="uid://71x75cokcpmr" path="res://art/assets/emociones/helpful2.png" id="11_06qn3"]
+[ext_resource type="Texture2D" uid="uid://74m3gldjicx4" path="res://art/assets/emociones/welcoming2.png" id="12_jlknb"]
+[ext_resource type="Texture2D" uid="uid://dbjjars14lh4j" path="res://art/assets/emociones/surprised2.png" id="13_76byg"]
+[ext_resource type="Texture2D" uid="uid://d0n0onq0jc17v" path="res://art/assets/emociones/laughing2.png" id="14_qxkno"]
+[ext_resource type="Texture2D" uid="uid://d014fhcwop1p1" path="res://art/assets/emociones/confused1.png" id="15_0v711"]
+[ext_resource type="Texture2D" uid="uid://duxtxxt4ud0ff" path="res://art/assets/emociones/no1.png" id="16_rtqtf"]
 [ext_resource type="Theme" uid="uid://dd4mjbdjh70dg" path="res://themes/inputtext.tres" id="18_tmmiu"]
 [ext_resource type="Script" uid="uid://ctirgwh01g8it" path="res://scripts/emoji_selected.gd" id="21_cf5ty"]
 
@@ -38,7 +39,7 @@ resource_local_to_scene = true
 shader = ExtResource("4_yyjqd")
 shader_parameter/radius = 20.110000955225
 shader_parameter/thickness = 3.4070001618325
-shader_parameter/color = Color(0.7137255, 0.18039216, 0.37254903, 0.49803922)
+shader_parameter/color = Color(0.972549, 0.72156864, 0, 0.49803922)
 shader_parameter/dash_count = 13.2310005809725
 shader_parameter/dash_ratio = 0.5
 shader_parameter/speed = 1.2
@@ -47,9 +48,17 @@ shader_parameter/speed = 1.2
 offset_right = 768.0
 offset_bottom = 292.0
 size_flags_horizontal = 0
-texture = ExtResource("1_waefy")
+texture = ExtResource("1_06qn3")
 stretch_mode = 4
 script = ExtResource("2_sk1ag")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=600755994]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 10.0
+offset_right = 769.0
+offset_bottom = 298.0
+texture = ExtResource("1_waefy")
 
 [node name="Outline" type="TextureRect" parent="." unique_id=58787496]
 visible = false
@@ -170,7 +179,7 @@ offset_top = 2.0
 offset_right = 740.0
 offset_bottom = 36.0
 theme = ExtResource("18_tmmiu")
-theme_override_colors/font_color = Color(0.06666667, 0.4745098, 0.5137255, 1)
+theme_override_colors/font_color = Color(0, 0.07058824, 0.29411766, 1)
 theme_override_font_sizes/font_size = 32
 text = "20.00"
 horizontal_alignment = 2

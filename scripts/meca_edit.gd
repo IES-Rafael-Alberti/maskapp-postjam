@@ -51,3 +51,7 @@ func _on_editing_toggled(_toggled_on: bool) -> void:
 
 func _on_line_edit_resized() -> void:
 	pass # Replace with function body.
+
+
+func _on_line_edit_focus_entered() -> void:
+	caret_blink = true

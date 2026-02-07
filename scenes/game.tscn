@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://cxqe5xvetca7k" path="res://scenes/line_edit.tscn" id="3_lnu2h"]
 [ext_resource type="PackedScene" uid="uid://cl3jlghbk3fir" path="res://scenes/conversation_p1.tscn" id="4_p57ef"]
 [ext_resource type="PackedScene" uid="uid://d1ed7v2jfqboh" path="res://scenes/conversation_p2.tscn" id="5_u5sy4"]
-[ext_resource type="Texture2D" uid="uid://e27upvutyxa3" path="res://art/assets/prototipo.png" id="6_p57ef"]
+[ext_resource type="Texture2D" uid="uid://eqpuqjy8grmw" path="res://art/assets/prototipo.png" id="6_p57ef"]
 [ext_resource type="Theme" uid="uid://dd4mjbdjh70dg" path="res://themes/inputtext.tres" id="7_u5sy4"]
 
 [node name="Game" type="Node2D" unique_id=1547055071]
@@ -24,6 +24,7 @@ offset_bottom = 1018.0
 texture = ExtResource("6_p57ef")
 
 [node name="Malaga Jam" type="Label" parent="Background" unique_id=2020000540]
+visible = false
 layout_mode = 0
 offset_left = 645.0
 offset_top = 18.0
@@ -41,7 +42,7 @@ offset_top = 18.0
 offset_right = 1266.0
 offset_bottom = 83.0
 theme = ExtResource("7_u5sy4")
-theme_override_colors/font_color = Color(0.06666667, 0.4745098, 0.5137255, 1)
+theme_override_colors/font_color = Color(0.10980392, 0.17254902, 0.37254903, 1)
 theme_override_font_sizes/font_size = 48
 text = "P1: 0"
 
@@ -52,7 +53,7 @@ offset_top = 20.0
 offset_right = 1802.0
 offset_bottom = 85.0
 theme = ExtResource("7_u5sy4")
-theme_override_colors/font_color = Color(0.7137255, 0.18039216, 0.37254903, 1)
+theme_override_colors/font_color = Color(0.972549, 0.72156864, 0, 1)
 theme_override_font_sizes/font_size = 48
 text = "P2: 0"
 
@@ -65,7 +66,7 @@ offset_bottom = 158.0
 theme = ExtResource("7_u5sy4")
 theme_override_colors/font_color = Color(0.37225115, 0.37225133, 0.37225124, 1)
 theme_override_font_sizes/font_size = 32
-text = "GODOT"
+text = "Ciberseguridad"
 
 [node name="Label2" type="Label" parent="Background" unique_id=457659622]
 layout_mode = 0
@@ -76,18 +77,18 @@ offset_bottom = 254.0
 theme = ExtResource("7_u5sy4")
 theme_override_colors/font_color = Color(0.37225115, 0.37225133, 0.37225124, 1)
 theme_override_font_sizes/font_size = 32
-text = "Rafael Alberti"
+text = "Videojuegos"
 
 [node name="Label3" type="Label" parent="Background" unique_id=484603535]
 layout_mode = 0
 offset_left = 245.0
 offset_top = 317.0
-offset_right = 385.0
+offset_right = 411.0
 offset_bottom = 350.0
 theme = ExtResource("7_u5sy4")
 theme_override_colors/font_color = Color(0.37225115, 0.37225133, 0.37225124, 1)
 theme_override_font_sizes/font_size = 32
-text = "Yes We Tech"
+text = "Big data e IA"
 
 [node name="Label4" type="Label" parent="Background" unique_id=1627200585]
 layout_mode = 0
@@ -98,7 +99,7 @@ offset_bottom = 448.0
 theme = ExtResource("7_u5sy4")
 theme_override_colors/font_color = Color(0.37225115, 0.37225133, 0.37225124, 1)
 theme_override_font_sizes/font_size = 32
-text = "FemDevs"
+text = "Rafael Alberti"
 
 [node name="Label5" type="Label" parent="Background" unique_id=2055887516]
 layout_mode = 0
@@ -109,7 +110,7 @@ offset_bottom = 543.0
 theme = ExtResource("7_u5sy4")
 theme_override_colors/font_color = Color(0.37225115, 0.37225133, 0.37225124, 1)
 theme_override_font_sizes/font_size = 32
-text = "Malaga Jam"
+text = "Desarrollo Web"
 
 [node name="Label6" type="Label" parent="Background" unique_id=1069117933]
 layout_mode = 0
@@ -120,7 +121,7 @@ offset_bottom = 634.0
 theme = ExtResource("7_u5sy4")
 theme_override_colors/font_color = Color(0.37225115, 0.37225133, 0.37225124, 1)
 theme_override_font_sizes/font_size = 32
-text = "La Madriguera"
+text = "Desarrollo Multi"
 
 [node name="Label7" type="Label" parent="Background" unique_id=1940093379]
 layout_mode = 0
@@ -131,7 +132,7 @@ offset_bottom = 729.0
 theme = ExtResource("7_u5sy4")
 theme_override_colors/font_color = Color(0.37225115, 0.37225133, 0.37225124, 1)
 theme_override_font_sizes/font_size = 32
-text = "Envasador"
+text = "Sist. Mic. Redes"
 
 [node name="Label8" type="Label" parent="Background" unique_id=124717483]
 layout_mode = 0
@@ -142,7 +143,7 @@ offset_bottom = 832.0
 theme = ExtResource("7_u5sy4")
 theme_override_colors/font_color = Color(0.37225115, 0.37225133, 0.37225124, 1)
 theme_override_font_sizes/font_size = 32
-text = "meta11co"
+text = "Informática Ofic."
 
 [node name="Label9" type="Label" parent="Background" unique_id=915892882]
 layout_mode = 0

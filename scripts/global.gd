@@ -12,7 +12,7 @@ var current_text_file = 0
 var conversations_size: int
 
 func disconnect_next_text():
-	print(next_text.get_connections().size())
+	#print(next_text.get_connections().size())
 	for connection in next_text.get_connections():
 		next_text.disconnect(connection["callable"])
 

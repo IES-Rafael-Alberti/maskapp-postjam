@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cxqe5xvetca7k"]
 
 [ext_resource type="Theme" uid="uid://dd4mjbdjh70dg" path="res://themes/inputtext.tres" id="1_47au0"]
-[ext_resource type="FontFile" uid="uid://cc6q3vdvv2kti" path="res://fonts/VT323-Regular.ttf" id="2_3jnow"]
+[ext_resource type="FontFile" uid="uid://caxculkxb43o0" path="res://fonts/VT323-Regular.ttf" id="2_3jnow"]
 [ext_resource type="Script" uid="uid://diqgb1fxgh0qq" path="res://scripts/line_edit.gd" id="2_vt5wb"]
 
 [sub_resource type="FontVariation" id="FontVariation_ulsvh"]
@@ -32,6 +32,8 @@ selecting_enabled = false
 deselect_on_focus_loss_enabled = false
 drag_and_drop_selection_enabled = false
 flat = true
+caret_blink = true
 script = ExtResource("2_vt5wb")
 
+[connection signal="focus_entered" from="." to="." method="_on_focus_entered"]
 [connection signal="resized" from="." to="." method="_on_resized"]

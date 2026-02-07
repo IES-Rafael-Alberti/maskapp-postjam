@@ -2,7 +2,7 @@
 
 [ext_resource type="Theme" uid="uid://dd4mjbdjh70dg" path="res://themes/inputtext.tres" id="1_07kr6"]
 [ext_resource type="Script" uid="uid://571s3ktyw33k" path="res://scripts/meca_edit.gd" id="2_07kr6"]
-[ext_resource type="FontFile" uid="uid://cc6q3vdvv2kti" path="res://fonts/VT323-Regular.ttf" id="2_qchl5"]
+[ext_resource type="FontFile" uid="uid://caxculkxb43o0" path="res://fonts/VT323-Regular.ttf" id="2_qchl5"]
 
 [sub_resource type="FontVariation" id="FontVariation_7eqac"]
 base_font = ExtResource("2_qchl5")
@@ -64,6 +64,8 @@ selecting_enabled = false
 deselect_on_focus_loss_enabled = false
 drag_and_drop_selection_enabled = false
 flat = true
+virtual_keyboard_enabled = false
 
 [connection signal="editing_toggled" from="LineEdit" to="." method="_on_editing_toggled"]
+[connection signal="focus_entered" from="LineEdit" to="." method="_on_line_edit_focus_entered"]
 [connection signal="text_changed" from="LineEdit" to="." method="_on_text_changed"]
