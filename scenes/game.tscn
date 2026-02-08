@@ -104,46 +104,46 @@ text = "Rafael Alberti"
 [node name="Label5" type="Label" parent="Background" unique_id=2055887516]
 layout_mode = 0
 offset_left = 247.0
-offset_top = 510.0
-offset_right = 387.0
-offset_bottom = 543.0
+offset_top = 514.0
+offset_right = 405.0
+offset_bottom = 547.0
 theme = ExtResource("7_u5sy4")
 theme_type_variation = &"HeaderSmall"
 theme_override_colors/font_color = Color(0.37225115, 0.37225133, 0.37225124, 1)
-text = "Desarrollo Web"
+text = "Hacemos webs"
 
 [node name="Label6" type="Label" parent="Background" unique_id=1069117933]
 layout_mode = 0
 offset_left = 247.0
-offset_top = 601.0
-offset_right = 387.0
-offset_bottom = 634.0
+offset_top = 608.0
+offset_right = 405.0
+offset_bottom = 641.0
 theme = ExtResource("7_u5sy4")
 theme_type_variation = &"HeaderSmall"
 theme_override_colors/font_color = Color(0.37225115, 0.37225133, 0.37225124, 1)
-text = "Desarrollo Multi"
+text = "Hacemos apps"
 
 [node name="Label7" type="Label" parent="Background" unique_id=1940093379]
 layout_mode = 0
 offset_left = 246.0
-offset_top = 696.0
-offset_right = 386.0
-offset_bottom = 729.0
+offset_top = 705.0
+offset_right = 443.0
+offset_bottom = 738.0
 theme = ExtResource("7_u5sy4")
 theme_type_variation = &"HeaderSmall"
 theme_override_colors/font_color = Color(0.37225115, 0.37225133, 0.37225124, 1)
-text = "Sist. Mic. Redes"
+text = "Montaje y redes"
 
 [node name="Label8" type="Label" parent="Background" unique_id=124717483]
 layout_mode = 0
 offset_left = 246.0
-offset_top = 799.0
-offset_right = 386.0
-offset_bottom = 832.0
+offset_top = 800.0
+offset_right = 418.0
+offset_bottom = 833.0
 theme = ExtResource("7_u5sy4")
 theme_type_variation = &"HeaderSmall"
 theme_override_colors/font_color = Color(0.37225115, 0.37225133, 0.37225124, 1)
-text = "Informática Ofic."
+text = "En la oficina"
 
 [node name="Label9" type="Label" parent="Background" unique_id=915892882]
 layout_mode = 0
