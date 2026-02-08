@@ -72,7 +72,7 @@ func next_player(first: bool = false):
 		current_dialog += 1
 		if current_dialog >= dialogs.size():
 			await get_tree().create_timer(3).timeout
-			get_tree().change_scene_to_file("res://scripts/gameover.tscn")
+			get_tree().change_scene_to_file("res://scenes/gameover.tscn")
 			return
 	Global.disconnect_next_text()
 	var conversation = players[current_player].instantiate()

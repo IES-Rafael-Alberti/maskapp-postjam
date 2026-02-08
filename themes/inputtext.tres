@@ -1,6 +1,7 @@
 [gd_resource type="Theme" format=3 uid="uid://dd4mjbdjh70dg"]
 
 [ext_resource type="FontFile" uid="uid://cy5wyq503wyvl" path="res://fonts/SyneMono-Regular.ttf" id="1_8aejo"]
+[ext_resource type="StyleBox" uid="uid://brsm4ns2esxq" path="res://themes/button_texture.tres" id="1_v37mr"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xx3mc"]
 
@@ -19,7 +20,18 @@
 [resource]
 default_font = ExtResource("1_8aejo")
 default_font_size = 24
+Button/colors/font_color = Color(0, 0, 0, 1)
+Button/colors/font_focus_color = Color(0, 0, 0, 1)
+Button/colors/font_hover_color = Color(0, 0, 0, 1)
+Button/colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+Button/colors/font_pressed_color = Color(0, 0, 0, 1)
+Button/styles/disabled = ExtResource("1_v37mr")
+Button/styles/focus = ExtResource("1_v37mr")
+Button/styles/hover = ExtResource("1_v37mr")
+Button/styles/normal = ExtResource("1_v37mr")
+Button/styles/pressed = ExtResource("1_v37mr")
 Label/colors/font_color = Color(0, 0, 0, 1)
+Label/font_sizes/font_size = 24
 Label/styles/focus = SubResource("StyleBoxEmpty_xx3mc")
 LineEdit/colors/caret_color = Color(0, 0, 0, 1)
 LineEdit/colors/font_color = Color(0, 0, 0, 1)
@@ -28,6 +40,7 @@ LineEdit/colors/font_uneditable_color = Color(0, 0, 0, 1)
 LineEdit/styles/focus = SubResource("StyleBoxEmpty_8aejo")
 LineEdit/styles/normal = SubResource("StyleBoxEmpty_v37mr")
 LineEdit/styles/read_only = SubResource("StyleBoxEmpty_iyamr")
+Puntuacion_final/font_sizes/font_size = 32
 TextEdit/colors/font_color = Color(0, 0, 0, 1)
 TextEdit/styles/focus = SubResource("StyleBoxEmpty_g4dn2")
 TextEdit/styles/normal = SubResource("StyleBoxEmpty_88py2")

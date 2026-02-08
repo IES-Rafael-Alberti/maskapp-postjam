@@ -137,9 +137,9 @@ text = "Montaje y redes"
 [node name="Label8" type="Label" parent="Background" unique_id=124717483]
 layout_mode = 0
 offset_left = 246.0
-offset_top = 800.0
+offset_top = 799.0
 offset_right = 418.0
-offset_bottom = 833.0
+offset_bottom = 832.0
 theme = ExtResource("7_u5sy4")
 theme_type_variation = &"HeaderSmall"
 theme_override_colors/font_color = Color(0.37225115, 0.37225133, 0.37225124, 1)

@@ -7,3 +7,6 @@ res://scenes/line_edit.tscn
 res://scenes/conversation_p1.tscn
 res://scripts/conversation_panel.gd
 res://scenes/conversation_p2.tscn
+res://scripts/game.gd
+res://scenes/gameover.tscn
+res://shaders/pixel_halo.gdshader

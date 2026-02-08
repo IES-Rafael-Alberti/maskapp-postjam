@@ -1,0 +1,151 @@
+[gd_scene format=3 uid="uid://csfdwvgftutdd"]
+
+[ext_resource type="Texture2D" uid="uid://eqpuqjy8grmw" path="res://art/assets/prototipo.png" id="1_bap5c"]
+[ext_resource type="Script" uid="uid://bgrdsb4lnscbd" path="res://scripts/gameover.gd" id="1_uq3gy"]
+[ext_resource type="Texture2D" uid="uid://cxhyyw182bmdd" path="res://art/assets/background-final.png" id="3_3gj0k"]
+[ext_resource type="Shader" uid="uid://qhabgyk2bnv3" path="res://shaders/glass.gdshader" id="3_ke020"]
+[ext_resource type="Shader" uid="uid://be35vhehcmpty" path="res://shaders/pixel_halo.gdshader" id="3_r8puk"]
+[ext_resource type="Texture2D" uid="uid://dl3mvgvt0lkut" path="res://art/assets/mensaje-final-azul.png" id="4_ke020"]
+[ext_resource type="Texture2D" uid="uid://dmsywc2nqpdfh" path="res://art/assets/mensaje-final-amarillo.png" id="5_r8puk"]
+[ext_resource type="Theme" uid="uid://dd4mjbdjh70dg" path="res://themes/inputtext.tres" id="7_hvwf0"]
+
+[sub_resource type="Gradient" id="Gradient_ke020"]
+offsets = PackedFloat32Array(0.0074626864, 1)
+colors = PackedColorArray(1, 0.9004846, 0.7125304, 0.654902, 0.7137255, 0.7058824, 0.48235294, 0.9019608)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_r8puk"]
+gradient = SubResource("Gradient_ke020")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_hvwf0"]
+resource_local_to_scene = true
+shader = ExtResource("3_r8puk")
+shader_parameter/pixelation = Vector2(64, 64)
+shader_parameter/gradient_steps = 64.0
+shader_parameter/gradient = SubResource("GradientTexture1D_r8puk")
+shader_parameter/spread = 0.40000000596046
+shader_parameter/size = 0.6070000763325001
+shader_parameter/speed = 2.0
+shader_parameter/ray1_density = 8.5
+shader_parameter/ray2_density = 8.5
+shader_parameter/ray2_intensity = 0.20000010449999994
+shader_parameter/core_intensity = 0.200000057
+shader_parameter/hdr = false
+shader_parameter/seed = 1.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_r8puk"]
+shader = ExtResource("3_ke020")
+shader_parameter/shape_type = 1
+shader_parameter/rect_size = Vector2(1400, 750)
+shader_parameter/corner_radius_top_left = 30.0
+shader_parameter/corner_radius_top_right = 30.0
+shader_parameter/corner_radius_bottom_left = 30.0
+shader_parameter/corner_radius_bottom_right = 30.0
+shader_parameter/circle_radius = 100.0
+shader_parameter/outline_enabled = true
+shader_parameter/outline_width = 30.0
+shader_parameter/outline_color = Color(0, 0.07058824, 0.29411766, 0.49803922)
+shader_parameter/shadow_enabled = false
+shader_parameter/shadow_color = Color(0, 0, 0, 0.5)
+shader_parameter/shadow_offset = Vector2(10, 10)
+shader_parameter/shadow_blur = 15.0
+shader_parameter/edge_softness = 1.0
+shader_parameter/shape_color = Color(0.9999997, 0.93615586, 0.81645143, 1)
+shader_parameter/color_gradient_y = 0.0
+shader_parameter/color_gradient_x = 9.499999986672947e-08
+shader_parameter/color_multiplier = 2.0
+shader_parameter/enable_screen_blur = true
+shader_parameter/blur_amount = 3.0
+shader_parameter/blur_samples = 4
+shader_parameter/glass_opacity = 0.6000000285
+shader_parameter/node_size = Vector2(1500, 850)
+
+[node name="Gameover" type="Node2D" unique_id=802098204]
+script = ExtResource("1_uq3gy")
+
+[node name="Background" type="TextureRect" parent="." unique_id=626863320]
+modulate = Color(1, 1, 1, 0.18431373)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 7.0
+offset_top = 53.0
+offset_right = 1927.0
+offset_bottom = 1013.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_bap5c")
+
+[node name="HaloEffect" type="TextureRect" parent="." unique_id=1837627592]
+modulate = Color(1, 1, 1, 0.18431373)
+material = SubResource("ShaderMaterial_hvwf0")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 7.0
+offset_top = 53.0
+offset_right = 1927.0
+offset_bottom = 1013.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_bap5c")
+
+[node name="DialogBackground" type="TextureRect" parent="." unique_id=1816242076]
+material = SubResource("ShaderMaterial_r8puk")
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 193.0
+offset_top = 94.0
+offset_right = 1754.0
+offset_bottom = 958.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_3gj0k")
+
+[node name="P1Dialog" type="TextureRect" parent="." unique_id=2132567076]
+offset_left = 481.0
+offset_top = 335.0
+offset_right = 913.0
+offset_bottom = 575.0
+texture = ExtResource("4_ke020")
+
+[node name="Player1" type="Label" parent="." unique_id=233476023]
+offset_left = 533.0
+offset_top = 391.0
+offset_right = 872.0
+offset_bottom = 523.0
+theme = ExtResource("7_hvwf0")
+theme_override_font_sizes/font_size = 96
+text = "12"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="P2Dialog" type="TextureRect" parent="." unique_id=1399791232]
+offset_left = 1028.0
+offset_top = 335.0
+offset_right = 1460.0
+offset_bottom = 575.0
+texture = ExtResource("5_r8puk")
+
+[node name="Player2" type="Label" parent="." unique_id=1824912597]
+offset_left = 1085.0
+offset_top = 387.0
+offset_right = 1414.0
+offset_bottom = 529.0
+theme = ExtResource("7_hvwf0")
+theme_override_font_sizes/font_size = 96
+text = "12"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="." unique_id=834268892]
+offset_left = 711.0
+offset_top = 655.0
+offset_right = 1230.0
+offset_bottom = 738.0
+theme = ExtResource("7_hvwf0")
+text = "Siguiente partida"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
