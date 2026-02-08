@@ -24,6 +24,7 @@ func activate():
 	
 func deactivate():
 	line_edit.editable = false
+	line_edit.release_focus()
 
 func _on_text_changed(_new_text: String) -> void:
 	if _new_text != next_text:

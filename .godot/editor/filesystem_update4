@@ -11,3 +11,5 @@ res://scripts/game.gd
 res://scenes/gameover.tscn
 res://shaders/pixel_halo.gdshader
 res://scripts/meca_edit.gd
+res://scripts/conversation.gd
+res://scripts/line_edit.gd

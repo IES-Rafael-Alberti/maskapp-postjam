@@ -9,6 +9,7 @@ func activate():
 
 func deactivate():
 	editable = false
+	release_focus()
 
 func is_empty() -> bool:
 	return text == ""
