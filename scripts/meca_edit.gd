@@ -1,6 +1,8 @@
 class_name MecaEdit
 extends LineEdit
 
+@onready var line_edit = $LineEdit
+
 @export var meca_text: String
 var next_text: String
 var current_char_index: int
@@ -8,7 +10,7 @@ var current_char_index: int
 var container_margin = 10.0
 
 func is_empty():
-	return meca_text != $LineEdit.text
+	return meca_text != line_edit.text
 
 func set_meca_text(_text: String):
 	meca_text = _text
@@ -17,16 +19,16 @@ func set_meca_text(_text: String):
 	next_text = meca_text.substr(0, current_char_index)
 
 func activate():
-	$LineEdit.editable = true
-	$LineEdit.grab_focus()
+	line_edit.editable = true
+	line_edit.grab_focus()
 	
 func deactivate():
-	$LineEdit.editable = false
+	line_edit.editable = false
 
 func _on_text_changed(_new_text: String) -> void:
 	if _new_text != next_text:
-		$LineEdit.text = $LineEdit.text.substr(0, current_char_index-1)
-		$LineEdit.caret_column = current_char_index
+		line_edit.text = line_edit.text.substr(0, current_char_index-1)
+		line_edit.caret_column = current_char_index
 	else:
 		current_char_index += 1
 		if current_char_index > meca_text.length():
@@ -54,4 +56,5 @@ func _on_line_edit_resized() -> void:
 
 
 func _on_line_edit_focus_entered() -> void:
+	line_edit.size.x = size.x
 	caret_blink = true

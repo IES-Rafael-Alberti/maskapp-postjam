@@ -2,10 +2,12 @@
 
 [ext_resource type="FontFile" uid="uid://cy5wyq503wyvl" path="res://fonts/SyneMono-Regular.ttf" id="1_8aejo"]
 [ext_resource type="StyleBox" uid="uid://brsm4ns2esxq" path="res://themes/button_texture.tres" id="1_v37mr"]
+[ext_resource type="Texture2D" uid="uid://cugja2bm3d23e" path="res://themes/focus_back.png" id="2_v37mr"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xx3mc"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8aejo"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_iyamr"]
+texture = ExtResource("2_v37mr")
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_v37mr"]
 
@@ -37,7 +39,7 @@ LineEdit/colors/caret_color = Color(0, 0, 0, 1)
 LineEdit/colors/font_color = Color(0, 0, 0, 1)
 LineEdit/colors/font_placeholder_color = Color(0, 0, 0, 0.6)
 LineEdit/colors/font_uneditable_color = Color(0, 0, 0, 1)
-LineEdit/styles/focus = SubResource("StyleBoxEmpty_8aejo")
+LineEdit/styles/focus = SubResource("StyleBoxTexture_iyamr")
 LineEdit/styles/normal = SubResource("StyleBoxEmpty_v37mr")
 LineEdit/styles/read_only = SubResource("StyleBoxEmpty_iyamr")
 Puntuacion_final/font_sizes/font_size = 32

@@ -10,3 +10,4 @@ res://scenes/conversation_p2.tscn
 res://scripts/game.gd
 res://scenes/gameover.tscn
 res://shaders/pixel_halo.gdshader
+res://scripts/meca_edit.gd
