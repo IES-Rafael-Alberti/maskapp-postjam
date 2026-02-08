@@ -28,6 +28,9 @@ func deactivate():
 
 func _on_text_changed(_new_text: String) -> void:
 	if _new_text != next_text:
+		if _new_text.length() < next_text.length():
+			current_char_index = _new_text.length()+1
+			next_text = meca_text.substr(0, current_char_index)
 		line_edit.text = line_edit.text.substr(0, current_char_index-1)
 		line_edit.caret_column = current_char_index
 	else:
@@ -59,3 +62,8 @@ func _on_line_edit_resized() -> void:
 func _on_line_edit_focus_entered() -> void:
 	line_edit.size.x = size.x
 	caret_blink = true
+
+
+func _on_line_edit_gui_input(event: InputEvent) -> void:
+	if event is InputEventMouse:
+		line_edit.caret_column = current_char_index

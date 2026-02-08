@@ -10,7 +10,7 @@
 
 [node name="Game" type="Node2D" unique_id=1547055071]
 script = ExtResource("1_yqjtg")
-text_files = Array[String](["res://text/try-my-game.txt", "res://text/urgency.txt", "res://text/visitor.txt"])
+text_files = Array[String](["res://text/contrasenas.txt", "res://text/phishing.txt", "res://text/privacidad.txt"])
 normal_text_scene = ExtResource("2_lbhrr")
 masked_text_scene = ExtResource("3_lnu2h")
 text_container_p1 = ExtResource("4_p57ef")
