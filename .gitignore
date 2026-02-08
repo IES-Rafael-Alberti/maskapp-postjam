@@ -1,1 +1,4 @@
 *.import
+
+# Config con API keys
+config/openrouter.cfg

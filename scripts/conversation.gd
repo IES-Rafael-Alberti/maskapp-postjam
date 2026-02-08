@@ -95,6 +95,15 @@ func load_file(dialog: String, text_container):
 func score() -> int:
 	var emoji_bonus = int(conversation_panel.libre_score * conversation_panel.emoji_mult)
 	return conversation_panel.meca_score + emoji_bonus
+
+func get_mensaje_completo() -> String:
+	var mensaje = ""
+	for child in conversation_panel.get_panel().get_children():
+		if child is Label:
+			mensaje += child.text
+		elif child is LineEdit:
+			mensaje += "[" + child.text + "]"
+	return mensaje
 	
 func add_normal_text(text: String, text_container):
 	var instance = normal_text_scene.instantiate()
