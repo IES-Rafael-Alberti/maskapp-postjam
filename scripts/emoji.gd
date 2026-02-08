@@ -3,7 +3,11 @@ extends TextureRect
 func _on_gui_input(event: InputEvent) -> void:
 	if event is InputEventMouseButton:
 		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
-			Global.envia_reachy(name)
+			if Global.openrouter_present:
+				var texto = get_tree().current_scene.current_conversation.get_mensaje_completo()
+				Global.evaluar_coherencia(texto, name)
+			else:
+				Global.envia_reachy(name)
 			get_parent().get_parent().get_parent()._on_emoji_selected(self)
 			#print(event.position)
 			#var rect: Rect2 = $Emojis_panel.get_global_rect()

@@ -34,6 +34,9 @@ func _ready() -> void:
 		Global.reachy_ip = file_ip.get_as_text().strip_edges()
 	Global.http = $HTTPRequest
 	Global.init_reachy()
+	Global.init_openrouter()
+	if Global.openrouter_present:
+		add_child(Global.http_openrouter)
 	players = [text_container_p1, text_container_p2]
 	Global.conversations_size = text_files.size()
 	var file_dialogs = FileAccess.open(text_files[Global.current_text_file], FileAccess.READ)
