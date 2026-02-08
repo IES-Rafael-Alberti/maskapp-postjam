@@ -3,6 +3,13 @@ extends TextureRect
 
 signal emojis_selected
 
+@onready var emojis_panel = $Emojis_panel
+@onready var emoji_selected_ui = $Emoji_selected
+@onready var emoji_selected_trans = $ColorRect2
+@onready var typing_timer = $Timer
+@onready var typing_timer_lbl = $TimerLbl
+@onready var panel_container = $Panel/TextContainer
+
 var emojis_selection: bool = false
 var timeout: bool = true
 var time_left: float = 0
@@ -31,23 +38,23 @@ func _update_scroll():
 	get_tree().current_scene.update_scroll()
 
 func _process(_delta: float) -> void:
-	if timeout and $Timer:
-		$Label.text = "%.2f" % $Timer.time_left
+	if timeout and typing_timer:
+		typing_timer_lbl.text = "%.2f" % typing_timer.time_left
 
 func _on_emoji_selected(_emoji):
 	if _emoji.name in emoji_scores:
 		emoji_mult = emoji_scores[_emoji.name]
 	emojis_selection = false
 	show_emojis(false)
-	$Emoji_selected.texture = _emoji.texture
-	$Emoji_selected.activate()
-	$ColorRect2.visible = true
+	emoji_selected_ui.texture = _emoji.texture
+	emoji_selected_ui.activate()
+	emoji_selected_trans .visible = true
 	get_tree().create_timer(1.5).timeout.connect(_on_highlight_end)
 
 
 
 func _on_highlight_end():
-	$ColorRect2.visible = false
+	emoji_selected_trans.visible = false
 	call_deferred("emojis_selected_emit")
 
 func emojis_selected_emit():
@@ -57,38 +64,38 @@ func get_panel():
 	return $Panel/TextContainer
 	
 func show_emojis(_visible:bool = true):
-	$Emojis_panel.visible = _visible
+	emojis_panel.visible = _visible
 	emojis_selection = _visible
 
 func stop_timer():
-	time_left = $Timer.time_left
-	$Timer.stop()
+	time_left = typing_timer.time_left
+	typing_timer.stop()
 	timeout = false
-	$Label.visible = false
+	typing_timer_lbl.visible = false
 	#$ColorRect.visible = false
 
 func restart_timer(is_meca: bool = false):
-	var remaining = $Timer.time_left
+	var remaining = typing_timer.time_left
 	if is_meca:
 		meca_score += int(remaining)
 	else:
 		libre_score += remaining
-	$Timer.stop()
-	$Timer.start()
+	typing_timer.stop()
+	typing_timer.start()
 	timeout = true
-	$Label.visible = true
+	typing_timer_lbl.visible = true
 	#$ColorRect.visible = true
 
 
 func restart_timer_no_score():
-	$Timer.stop()
-	$Timer.start()
+	typing_timer.stop()
+	typing_timer.start()
 	timeout = true
-	$Label.visible = true
+	typing_timer_lbl.visible = true
 	#$ColorRect.visible = true
 
 func capture_last_field(is_meca: bool):
-	var remaining = $Timer.time_left
+	var remaining = typing_timer.time_left
 	if is_meca:
 		meca_score += int(remaining)
 	else:

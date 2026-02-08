@@ -1,17 +1,34 @@
 [gd_resource type="Theme" format=3 uid="uid://dd4mjbdjh70dg"]
 
-[ext_resource type="FontFile" uid="uid://cc6q3vdvv2kti" path="res://fonts/VT323-Regular.ttf" id="1_xx3mc"]
+[ext_resource type="FontFile" uid="uid://cy5wyq503wyvl" path="res://fonts/SyneMono-Regular.ttf" id="1_8aejo"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xx3mc"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8aejo"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_v37mr"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_iyamr"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_g4dn2"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_88py2"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_iajth"]
 
 [resource]
+default_font = ExtResource("1_8aejo")
+default_font_size = 24
 Label/colors/font_color = Color(0, 0, 0, 1)
-Label/font_sizes/font_size = 24
-Label/fonts/font = ExtResource("1_xx3mc")
+Label/styles/focus = SubResource("StyleBoxEmpty_xx3mc")
 LineEdit/colors/caret_color = Color(0, 0, 0, 1)
 LineEdit/colors/font_color = Color(0, 0, 0, 1)
 LineEdit/colors/font_placeholder_color = Color(0, 0, 0, 0.6)
 LineEdit/colors/font_uneditable_color = Color(0, 0, 0, 1)
-LineEdit/font_sizes/font_size = 24
-LineEdit/fonts/font = ExtResource("1_xx3mc")
+LineEdit/styles/focus = SubResource("StyleBoxEmpty_8aejo")
+LineEdit/styles/normal = SubResource("StyleBoxEmpty_v37mr")
+LineEdit/styles/read_only = SubResource("StyleBoxEmpty_iyamr")
 TextEdit/colors/font_color = Color(0, 0, 0, 1)
-TextEdit/font_sizes/font_size = 16
-TextEdit/fonts/font = ExtResource("1_xx3mc")
+TextEdit/styles/focus = SubResource("StyleBoxEmpty_g4dn2")
+TextEdit/styles/normal = SubResource("StyleBoxEmpty_88py2")
+TextEdit/styles/read_only = SubResource("StyleBoxEmpty_iajth")

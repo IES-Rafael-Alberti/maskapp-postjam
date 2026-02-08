@@ -1,27 +1,12 @@
 [gd_scene format=3 uid="uid://cxqe5xvetca7k"]
 
 [ext_resource type="Theme" uid="uid://dd4mjbdjh70dg" path="res://themes/inputtext.tres" id="1_47au0"]
-[ext_resource type="FontFile" uid="uid://caxculkxb43o0" path="res://fonts/VT323-Regular.ttf" id="2_3jnow"]
 [ext_resource type="Script" uid="uid://diqgb1fxgh0qq" path="res://scripts/line_edit.gd" id="2_vt5wb"]
-
-[sub_resource type="FontVariation" id="FontVariation_ulsvh"]
-base_font = ExtResource("2_3jnow")
-variation_embolden = 0.3
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_uwrxv"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yqjtg"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_lnu2h"]
 
 [node name="LineEdit" type="LineEdit" unique_id=1219361879]
 offset_right = 40.0
 offset_bottom = 25.0
 theme = ExtResource("1_47au0")
-theme_override_fonts/font = SubResource("FontVariation_ulsvh")
-theme_override_styles/normal = SubResource("StyleBoxEmpty_uwrxv")
-theme_override_styles/read_only = SubResource("StyleBoxEmpty_yqjtg")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_lnu2h")
 editable = false
 expand_to_text_length = true
 context_menu_enabled = false

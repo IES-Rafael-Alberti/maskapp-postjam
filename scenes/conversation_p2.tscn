@@ -157,7 +157,7 @@ offset_right = 756.0
 offset_bottom = 46.0
 texture = ExtResource("16_y1wo0")
 
-[node name="Label" type="Label" parent="." unique_id=2111485015]
+[node name="TimerLbl" type="Label" parent="." unique_id=2111485015]
 layout_mode = 0
 offset_left = 677.0
 offset_top = 2.0
