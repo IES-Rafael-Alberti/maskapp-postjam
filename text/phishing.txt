@@ -1,11 +1,12 @@
-Me ha llegado un email diciendo que %mi cuenta% está bloqueada. Me piden datos urgentes. Voy a ___ .
+Oye, me ha llegado un email diciendo que %mi cuenta% del banco está bloqueada. Voy a ___ .
 
-Espera, ¿has mirado bien %el remitente%? A veces estas cosas son ___ y hay que tener cuidado.
+Anda, qué raro. A mí me llegó uno %parecido% hace poco. Yo lo que hice fue ___ .
 
-Pone que es de "seguridad-banco.com". Parece %oficial%, ¿no? Yo creo que voy a ___ .
+El remitente pone "seguridad-banco.com" y hay un %enlace% para entrar. Creo que voy a ___ .
 
-Mmm, eso suena raro. Yo en tu lugar haría ___ . Aunque tú verás, es %tu cuenta%.
+Buf, yo cuando veo esas %direcciones% raras lo que hago es ___ .
 
-Bueno, total solo me piden el DNI y ___ . No creo que pase %nada malo%.
+Es que me piden el DNI y el número de %tarjeta% para verificar. Voy a ___ .
 
-¡Tú sabrás! Luego no digas que no te ___ . Con estas cosas hay que ser %muy prudente%.
+Bueno, ya me contarás qué tal. Yo con los %emails% del banco siempre hago ___ .
+
