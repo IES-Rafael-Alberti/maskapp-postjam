@@ -103,7 +103,7 @@ func _on_openrouter_completed(_result, response_code, _headers, body):
 
 	var emoji_final = pending_emoji
 	if respuesta.find("<juicio>MAL</juicio>") != -1:
-		emoji_final = "resigned1"
+		emoji_final = "lost1"
 
 	print("[REACHY] Reacción: %s" % emoji_final)
 	envia_reachy(emoji_final)
